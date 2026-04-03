@@ -11,6 +11,7 @@ public class MissileLauncher : MonoBehaviour
     public GameObject Launch(Transform target)
     {
         activeMissile = Instantiate(missilePrefab, launchPoint.position, launchPoint.rotation);
+        activeMissile.GetComponent<MissileHoming>().SetTarget(target);
 
         if (launchAudioSource != null)
             launchAudioSource.Play();

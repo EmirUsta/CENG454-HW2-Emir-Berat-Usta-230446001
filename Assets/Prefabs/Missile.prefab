@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6427744500552908201}
   - component: {fileID: 7077885101053683211}
   - component: {fileID: 1142955355798201328}
+  - component: {fileID: 3074953747274583904}
   m_Layer: 0
   m_Name: Missile
   m_TagString: Missile
@@ -28,13 +29,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4244094367744937212}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 467.6779, y: 1.8, z: -7.15481}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 2.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!33 &8271940871188692844
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -142,3 +143,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3074953747274583904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4244094367744937212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 104aa4f8d9dd322fca61c436cdeb5ba4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MissileHoming
+  moveSpeed: 20
+  turnSpeed: 5
