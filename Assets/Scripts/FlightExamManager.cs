@@ -5,6 +5,7 @@ public class FlightExamManager : MonoBehaviour
 {
     [SerializeField] private TMP_Text statusText;
     [SerializeField] private TMP_Text missionText;
+    [SerializeField] private AudioSource missionCompleteAudioSource;
 
     bool hasTakenOff;
     bool threatCleared;
@@ -36,5 +37,15 @@ public class FlightExamManager : MonoBehaviour
     {
         missionComplete = true;
         missionText.text = "Mission: Complete!";
+        missionCompleteAudioSource?.Play();
+    }
+
+    public void MissionFailed()
+    {
+        hasTakenOff = false;
+        threatCleared = false;
+        missionComplete = false;
+        statusText.text = "Status: On Ground";
+        missionText.text = "Mission: Take off and clear the danger zone.";
     }
 }
