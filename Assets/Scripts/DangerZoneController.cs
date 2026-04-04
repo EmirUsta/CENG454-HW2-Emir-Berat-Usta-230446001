@@ -5,6 +5,7 @@ public class DangerZoneController : MonoBehaviour
 {
     [SerializeField] private FlightExamManager examManager;
     [SerializeField] private MissileLauncher missileLauncher;
+    [SerializeField] private AudioSource zoneWarningAudioSource;
 
     [SerializeField] private float missileDelay = 5f;
 
@@ -15,6 +16,7 @@ public class DangerZoneController : MonoBehaviour
     {
         if (!other.CompareTag("Player")) return;
         playerTransform = other.transform;
+        zoneWarningAudioSource?.Play();
         examManager.EnterDangerZone();
         activeCountdown = StartCoroutine(MissileCountdown());
     }
